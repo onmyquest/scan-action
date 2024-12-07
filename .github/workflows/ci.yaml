@@ -1,6 +1,7 @@
 name: Run Tests
 
-on: 
+on:
+  pull_request:
 
 jobs:
   test:
