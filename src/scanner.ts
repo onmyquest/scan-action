@@ -95,6 +95,7 @@ export async function executeScan(scanFlags: ComposeFlags): Promise<ScanExecutio
   let start = performance.now();
   let cmd = `./${cliScannerName} ${flags}`;
   core.info("Executing: " + cmd);
+  core.info("Executing: " + cmd);
   let retCode = await exec.exec(cmd, undefined, scanOptions);
   core.info("Image analysis took " + Math.round(performance.now() - start) + " milliseconds.");
 
