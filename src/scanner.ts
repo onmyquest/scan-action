@@ -75,6 +75,7 @@ export async function executeScan(scanFlags: ComposeFlags): Promise<ScanExecutio
         process.stderr.write(data);
       }
     }
+    core.info("Env: " + env);
   };
 
   const catOptions: exec.ExecOptions = {
