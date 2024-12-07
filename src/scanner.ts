@@ -63,7 +63,7 @@ export async function executeScan(scanFlags: ComposeFlags): Promise<ScanExecutio
   const scanOptions: exec.ExecOptions = {
     env: {
       ...process.env,
-      ...envvars
+      ...envvars,
     },
     silent: true,
     ignoreReturnCode: true,
