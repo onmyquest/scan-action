@@ -90,6 +90,7 @@ export async function executeScan(scanFlags: ComposeFlags): Promise<ScanExecutio
     }
   }
 
+  core.info("Print test");
   core.info("Env: " + JSON.stringify(scanOptions.env, null, 2));
   let start = performance.now();
   let cmd = `./${cliScannerName} ${flags}`;
