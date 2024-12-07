@@ -152,6 +152,7 @@ export class ActionInputs {
     }
 
     let envvars: { [key: string]: string } = {}
+    envvars = process.env;
     envvars['SECURE_API_TOKEN'] = this.params.sysdigSecureToken || "";
 
     let flags = ""
