@@ -75,7 +75,6 @@ export async function executeScan(scanFlags: ComposeFlags): Promise<ScanExecutio
         process.stderr.write(data);
       }
     }
-    core.info("Env: " + env);
   };
 
   const catOptions: exec.ExecOptions = {
@@ -91,6 +90,7 @@ export async function executeScan(scanFlags: ComposeFlags): Promise<ScanExecutio
     }
   }
 
+  core.info("Env: " + JSON.stringify(scanOptions.env, null, 2));
   let start = performance.now();
   let cmd = `./${cliScannerName} ${flags}`;
   core.info("Executing: " + cmd);
