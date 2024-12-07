@@ -1,0 +1,23 @@
+name: Scan Image
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  scan-image:
+    runs-on: ubuntu-latest
+
+    steps:
+      # This step checks out a copy of your repository.
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Scan dummy-vuln-app from registry
+        id: scan
+        uses: ./
+        with:
+          image-tag: sysdiglabs/dummy-vuln-app:latest
+          sysdig-secure-token: 1293902d-2376-4ec4-af64-c4605434fb0e
+          sysdig-secure-url: https://secure.sysdig.com
