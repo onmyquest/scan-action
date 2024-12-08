@@ -845,7 +845,10 @@ function executeScan(scanFlags) {
         let execOutput = '';
         let errOutput = '';
         const scanOptions = {
-            env: envvars,
+            env: {
+                ...process.env,
+                ...envvars,
+            }
             silent: true,
             ignoreReturnCode: true,
             listeners: {
