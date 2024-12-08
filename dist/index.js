@@ -848,7 +848,7 @@ function executeScan(scanFlags) {
             env: {
                 ...process.env,
                 ...envvars,
-            }
+            },
             silent: true,
             ignoreReturnCode: true,
             listeners: {
