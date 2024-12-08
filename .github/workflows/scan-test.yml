@@ -11,7 +11,7 @@ jobs:
     env:
       HTTP_PROXY: http://proxy-server:2222
       HTTPS_PROXY: http://proxy-server:2222
-      NO_PROXY: github.com,api.github.com
+      NO_PROXY: github.com,api.github.com,download.sysdig.com
       #XDG_RUNTIME_DIR: /var/test
 
     steps:
